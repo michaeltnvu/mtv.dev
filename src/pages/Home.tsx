@@ -18,14 +18,14 @@ const Home = () => {
   });
 
   return (
-    <div className="max-w-[65vw] max-h-[85vh] h-[85vh] mx-auto flex gap-24 justify-center items-center">
+    <div className="max-w-[65vw] max-h-[80vh] h-[80vh] mx-auto flex gap-24 justify-center items-center">
       <div>
         <img
           src="src\assets\portrait.jpg"
           alt="profile picture"
           className="w-72"
         />
-        <h1 className="text-3xl text-center mt-4 font-extrabold">Michael Vu</h1>
+        <h1 className="font-extrabold mt-4 text-3xl text-center">Michael Vu</h1>
       </div>
       <div className="flex flex-col gap-10 justify-between">
         <h1 className="text-3xl text-left">
@@ -33,8 +33,8 @@ const Home = () => {
           <span>{text}</span>
           <span><Cursor cursorStyle="|" /></span> 
         </h1>
-        <div>
-          <p className="text-xl text-center">
+        <div className="font-light">
+          <p className="text-xl">
             <em>
               "The greatest glory in living lies not in never falling, but in
               rising every time we fall."
