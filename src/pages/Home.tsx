@@ -10,7 +10,7 @@ const Home = () => {
       "now a pickleball enthusiast (bc old, but athletic!)",
       "also a gym-goer (bc food!)",
       "traveling the world when on vacation (bc wow!)",
-      "saying yes (bc you want to hire me!)"
+      "shouting yes (bc you want to hire me!)"
     ],
     loop: true,
     typeSpeed: 60,
