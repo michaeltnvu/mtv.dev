@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="mx-4 my-2 flex flex-col justify-between text-center">
+    <div className="mx-4 mt-4 flex flex-col justify-between text-center">
       <div className="flex items-center gap-3 mx-auto">
         <Link to="https://github.com/michaeltnvu" target="_blank">
           <VscGithubInverted className="w-11 h-11" />

@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="h-[95vh]">
       <Navbar />
 
       <Routes>

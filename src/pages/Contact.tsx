@@ -63,10 +63,10 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
   `;
 
   return (
-    <div className="max-w-[65vw] max-h-[85vh] w-1/2 h-[85vh] mx-auto flex flex-col justify-center items-center">
-      <h2 className="text-3xl mb-10">Let's connect!</h2>
+    <div className="max-w-[65vw] max-h-[85vh] mx-auto w-1/2 h-[84vh] flex flex-col justify-center items-center">
+      <h2 className="font-bold text-3xl mb-10">Let's connect!</h2>
       {statusMessage && <p className="text-green-800">{statusMessage}</p>}
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
         <div className="w-full">
           <label htmlFor="name" className="text-2xl">
             Name:
@@ -83,7 +83,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
             required
           />
         </div>
-        <div className="my-6 w-full">
+        <div className="w-full">
           <label htmlFor="email" className="text-2xl">
             Email:
           </label>
@@ -108,7 +108,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
             id="message"
             name="message"
             placeholder={tonyStark}
-            rows={10}
+            rows={5}
             value={formData.message}
             onChange={handleChange}
             className="border border-gray-600 mt-1 p-2 rounded-md w-full"
@@ -117,7 +117,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
         </div>
         <button
           type="submit"
-          className="bg-blue-500 border float-right py-2 px-6 mt-4 rounded-md text-white text-xl hover:bg-blue-700"
+          className="bg-indigo-400 border float-right py-2 px-6 mt-4 rounded-md text-white text-xl hover:bg-indigo-500 w-36 self-end"
         >
           Send
         </button>
