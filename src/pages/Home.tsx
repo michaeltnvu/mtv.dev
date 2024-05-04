@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
@@ -18,41 +19,69 @@ const Home = () => {
     deleteSpeed: 40,
   });
 
+  const updateImgSrc: () => void = () => {
+    const image = document.getElementById("responsiveImg") as HTMLImageElement;
+    const mediumScreen: MediaQueryList =
+      window.matchMedia("(min-width: 768px)");
+
+    image.src = mediumScreen.matches
+      ? "/images/portrait.jpg"
+      : "/images/portraitsq.jpg";
+  };
+
+  useEffect(() => {
+    updateImgSrc();
+
+    const isMediumScreen: MediaQueryList =
+      window.matchMedia("(min-width: 768px)");
+
+    isMediumScreen.addEventListener("change", updateImgSrc);
+
+    return () => {
+      isMediumScreen.removeEventListener("change", updateImgSrc);
+    };
+  }, []);
+
   return (
-    <div className="max-w-[65vw] max-h-[90vh] h-[82vh] mx-auto flex gap-24 justify-center items-center">
-      <div className="flex flex-col items-center">
-        <img
-          src="/images/portrait.jpg"
-          alt="profile picture"
-          className="w-72"
-        />
-        <h1 className="font-bold mt-4 mb-2 text-3xl">Michael Vu</h1>
-        <Link
-          to="https://drive.google.com/file/d/1OTI_N9mykEPVAxAYo1ELGu-Q-aKK_CME/view?usp=sharing"
-          target="_blank"
-          className="border border-black py-1 px-4 bg-indigo-500 hover:bg-indigo-400 rounded-sm text-white"
-        >
-          <span>Resume</span>
-        </Link>
-      </div>
-      <div className="flex flex-col gap-10 justify-between">
-        <h1 className="text-3xl text-left">
+    <>
+      <section className="flex flex-col md:flex-row items-center justify-between space-y-16">
+        <article className="flex flex-col gap-2 items-center mt-14">
+          <img
+            id="responsiveImg"
+            alt="profile picture"
+            className="w-60"
+          />
+          <h1 className="font-bold text-3xl">Michael Vu</h1>
+          <Link
+            to="https://drive.google.com/file/d/1OTI_N9mykEPVAxAYo1ELGu-Q-aKK_CME/view?usp=sharing"
+            target="_blank"
+            className="border border-black py-1 px-4 bg-indigo-500 hover:bg-indigo-400 rounded-sm shadow-md text-white"
+          >
+            <span>Resume</span>
+          </Link>
+        </article>
+
+        {/* <article>
+        <h2 className="text-lg px-8">
           I'm <span>{text}</span>
           <span>
             <Cursor cursorStyle="|" />
           </span>
-        </h1>
-        <div className="font-light">
-          <p className="text-xl">
+        </h2>
+      </article> */}
+
+        <article className="font-light px-10 text-lg">
+          <p>
             <em>
               "The greatest glory in living lies not in never falling, but in
               rising every time we fall."
             </em>
           </p>
-          <span className="float-right text-xl">- Nelson Mandela</span>
-        </div>
-      </div>
-    </div>
+          <span className="float-right">- Nelson Mandela</span>
+        </article>
+      </section>
+      <section className="md-lg:"></section>
+    </>
   );
 };
 
