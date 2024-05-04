@@ -7,13 +7,27 @@ const Navbar = () => {
       <div className="flex gap-6">
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) => {
+            const hoverAnimation =
+              "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+            const activeClass = isActive
+              ? "underline decoration-indigo-500 decoration-double"
+              : "";
+            return `${hoverAnimation} ${activeClass}`;
+          }}
         >
           home
         </NavLink>
         <NavLink
           to="/projects"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) => {
+            const hoverAnimation =
+              "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+            const activeClass = isActive
+              ? "underline decoration-indigo-500 decoration-double"
+              : "";
+            return `${hoverAnimation} ${activeClass}`;
+          }}
         >
           projects
         </NavLink>
@@ -25,7 +39,14 @@ const Navbar = () => {
         </NavLink> */}
         <NavLink
           to="/contact"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) => {
+            const hoverAnimation =
+              "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+            const activeClass = isActive
+              ? "underline decoration-indigo-500 decoration-double"
+              : "";
+            return `${hoverAnimation} ${activeClass}`;
+          }}
         >
           contact
         </NavLink>

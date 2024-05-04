@@ -8,7 +8,7 @@ interface ContactFormData {
 }
 
 const Contact: React.FC = () => {
-  const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState<string>("");
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -63,10 +63,10 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
   `;
 
   return (
-    <div className="max-w-[65vw] max-h-[85vh] mx-auto w-1/2 h-[84vh] flex flex-col justify-center items-center">
-      <h2 className="font-bold text-3xl mb-10">Let's connect!</h2>
+    <div className="max-w-[65vw] max-h-[90vh] mx-auto w-1/2 h-[70.5vh] my-20 flex flex-col items-center">
+      <h2 className="font-bold text-3xl">Let's connect!</h2>
       {statusMessage && <p className="text-green-800">{statusMessage}</p>}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-20 w-full">
         <div className="w-full">
           <label htmlFor="name" className="text-2xl">
             Name:
@@ -108,16 +108,16 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
             id="message"
             name="message"
             placeholder={tonyStark}
-            rows={5}
+            rows={6}
             value={formData.message}
             onChange={handleChange}
-            className="border border-gray-600 mt-1 p-2 rounded-md w-full"
+            className="border border-gray-600 mt-1 p-2 rounded-md w-full resize-y max-h-72"
             required
           />
         </div>
         <button
           type="submit"
-          className="bg-indigo-400 border float-right py-2 px-6 mt-4 rounded-md text-white text-xl hover:bg-indigo-500 w-36 self-end"
+          className="bg-indigo-500 border float-right py-2 px-6 mt-4 rounded-md text-white text-xl hover:bg-indigo-400 w-36 self-end"
         >
           Send
         </button>

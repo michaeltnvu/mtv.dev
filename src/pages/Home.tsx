@@ -29,9 +29,9 @@ const Home = () => {
         <h1 className="font-bold mt-4 mb-2 text-3xl">Michael Vu</h1>
         <Link
           to=""
-          className="border border-black py-1 px-4 hover:before:bg-red relative overflow-hidden bg-white shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-indigo-400 before:transition-all before:duration-200 hover:text-black hover:before:left-0 hover:before:w-full"
+          className="border border-black py-1 px-4 bg-indigo-500 hover:bg-indigo-400 rounded-sm text-white"
         >
-          <span className="relative z-10">Resume</span>
+          <span>Resume</span>
         </Link>
       </div>
       <div className="flex flex-col gap-10 justify-between">
