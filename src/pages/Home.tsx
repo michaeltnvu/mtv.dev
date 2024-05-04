@@ -22,7 +22,7 @@ const Home = () => {
     <div className="max-w-[65vw] max-h-[90vh] h-[82vh] mx-auto flex gap-24 justify-center items-center">
       <div className="flex flex-col items-center">
         <img
-          src="./assets/portrait.jpg"
+          src="/images/portrait.jpg"
           alt="profile picture"
           className="w-72"
         />
