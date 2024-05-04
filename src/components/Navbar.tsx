@@ -8,45 +8,7 @@ const Navbar = () => {
   //   <nav className="flex justify-between items-center text-xl mx-10">
   //     <img src="images/logo.png" alt="logo" className="w-20"/>
   //     <div className="flex gap-6">
-  //       <NavLink
-  //         to="/"
-  //         className={({ isActive }) => {
-  //           const hoverAnimation =
-  //             "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
-  //           const activeClass = isActive
-  //             ? "underline decoration-indigo-500 decoration-double"
-  //             : "";
-  //           return `${hoverAnimation} ${activeClass}`;
-  //         }}
-  //       >
-  //         home
-  //       </NavLink>
-  //       <NavLink
-  //         to="/projects"
-  //         className={({ isActive }) => {
-  //           const hoverAnimation =
-  //             "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
-  //           const activeClass = isActive
-  //             ? "underline decoration-indigo-500 decoration-double"
-  //             : "";
-  //           return `${hoverAnimation} ${activeClass}`;
-  //         }}
-  //       >
-  //         projects
-  //       </NavLink>
-  //       <NavLink
-  //         to="/contact"
-  //         className={({ isActive }) => {
-  //           const hoverAnimation =
-  //             "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
-  //           const activeClass = isActive
-  //             ? "underline decoration-indigo-500 decoration-double"
-  //             : "";
-  //           return `${hoverAnimation} ${activeClass}`;
-  //         }}
-  //       >
-  //         contact
-  //       </NavLink>
+
   //     </div>
   //   </nav>
   // );
@@ -59,17 +21,23 @@ const Navbar = () => {
         <section className="flex lg:hidden">
           <div
             className="hover:cursor-pointer mr-2 space-y-1 "
-            onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
+            onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <span className="block h-0.5 w-6 animate-pulse bg-black"></span>
             <span className="block h-0.5 w-6 animate-pulse bg-black"></span>
             <span className="block h-0.5 w-6 animate-pulse bg-black"></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div
+            className={
+              isNavOpen
+                ? "absolute w-full h-[100vh] top-0 left-0 bg-white z-10 flex flex-col justify-evenly items-center"
+                : "hidden"
+            }
+          >
             <div
               className="absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)}
+              onClick={() => setIsNavOpen((prev) => !prev)}
             >
               <svg
                 className="hover:cursor-pointer h-6 w-6"
@@ -107,37 +75,54 @@ const Navbar = () => {
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+        <ul className="gap-6 hidden lg:flex mr-4">
           <li>
-            <a href="/about">About</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) => {
+                const hoverAnimation =
+                  "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+                const activeClass = isActive
+                  ? "underline decoration-indigo-500 decoration-double"
+                  : "";
+                return `${hoverAnimation} ${activeClass}`;
+              }}
+            >
+              home
+            </NavLink>
           </li>
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => {
+                const hoverAnimation =
+                  "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+                const activeClass = isActive
+                  ? "underline decoration-indigo-500 decoration-double"
+                  : "";
+                return `${hoverAnimation} ${activeClass}`;
+              }}
+            >
+              projects
+            </NavLink>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => {
+                const hoverAnimation =
+                  "hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-indigo-500 before:absolute before:left-0 before:bottom-0";
+                const activeClass = isActive
+                  ? "underline decoration-indigo-500 decoration-double"
+                  : "";
+                return `${hoverAnimation} ${activeClass}`;
+              }}
+            >
+              contact
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
     </div>
   );
 };
