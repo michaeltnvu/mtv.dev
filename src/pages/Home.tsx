@@ -28,7 +28,7 @@ const Home = () => {
         />
         <h1 className="font-bold mt-4 mb-2 text-3xl">Michael Vu</h1>
         <Link
-          to="https://docs.google.com/document/d/17tMe-WwcbsV9UMDKfORjcnGAnFPw1dVB/edit?usp=sharing&ouid=110589629632812440972&rtpof=true&sd=true"
+          to="https://drive.google.com/file/d/1OTI_N9mykEPVAxAYo1ELGu-Q-aKK_CME/view?usp=sharing"
           target="_blank"
           className="border border-black py-1 px-4 bg-indigo-500 hover:bg-indigo-400 rounded-sm text-white"
         >
