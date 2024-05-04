@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="h-[95vh]">
+    <div className="min-h-screen">
       <Navbar />
 
       <Routes>

@@ -63,7 +63,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
   `;
 
   return (
-    <div className="max-w-[65vw] max-h-[90vh] mx-auto w-1/2 h-[70.5vh] my-20 flex flex-col items-center">
+    <div className="max-w-[65vw] max-h-[90vh] mx-auto w-1/2 h-[66.8vh] my-20 flex flex-col items-center">
       <h2 className="font-bold text-3xl">Let's connect!</h2>
       {statusMessage && <p className="text-green-800">{statusMessage}</p>}
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-20 w-full">
@@ -111,7 +111,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
             rows={6}
             value={formData.message}
             onChange={handleChange}
-            className="border border-gray-600 mt-1 p-2 rounded-md w-full resize-y max-h-72"
+            className="border border-gray-600 mt-1 p-2 rounded-md w-full resize-y max-h-60"
             required
           />
         </div>
