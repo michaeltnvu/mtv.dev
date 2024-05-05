@@ -19,7 +19,7 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <>
       <section className="flex flex-col max-md:mt-14 md:flex-row md:mx-10 items-center justify-center max-md:space-y-16">
         <article className="flex flex-col gap-2 items-center">
           <img
@@ -59,7 +59,7 @@ const Home = () => {
           </div>
         </article>
       </section>
-    </div>
+    </>
   );
 };
 
