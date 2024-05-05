@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
@@ -19,37 +18,19 @@ const Home = () => {
     deleteSpeed: 40,
   });
 
-  const updateImgSrc: () => void = () => {
-    const image = document.getElementById("responsiveImg") as HTMLImageElement;
-    const mediumScreen: MediaQueryList =
-      window.matchMedia("(min-width: 768px)");
-
-    image.src = mediumScreen.matches
-      ? "/images/portrait.jpg"
-      : "/images/portraitsq.jpg";
-  };
-
-  useEffect(() => {
-    updateImgSrc();
-
-    const isMediumScreen: MediaQueryList =
-      window.matchMedia("(min-width: 768px)");
-
-    isMediumScreen.addEventListener("change", updateImgSrc);
-
-    return () => {
-      isMediumScreen.removeEventListener("change", updateImgSrc);
-    };
-  }, []);
-
   return (
-    <>
-      <section className="flex flex-col md:flex-row items-center justify-between space-y-16">
-        <article className="flex flex-col gap-2 items-center mt-14">
+    <div>
+      <section className="flex flex-col max-md:mt-14 md:flex-row md:mx-10 items-center justify-center max-md:space-y-16">
+        <article className="flex flex-col gap-2 items-center">
           <img
-            id="responsiveImg"
+            src="/images/portraitsq.jpg"
             alt="profile picture"
-            className="w-60"
+            className="hidden max-sm:block w-60"
+          />
+          <img
+            src="/images/portrait.jpg"
+            alt="profile picture"
+            className="hidden md:block w-60"
           />
           <h1 className="font-bold text-3xl">Michael Vu</h1>
           <Link
@@ -60,28 +41,25 @@ const Home = () => {
             <span>Resume</span>
           </Link>
         </article>
-
-        {/* <article>
-        <h2 className="text-lg px-8">
-          I'm <span>{text}</span>
-          <span>
-            <Cursor cursorStyle="|" />
-          </span>
-        </h2>
-      </article> */}
-
-        <article className="font-light px-10 text-lg">
-          <p>
-            <em>
-              "The greatest glory in living lies not in never falling, but in
-              rising every time we fall."
-            </em>
-          </p>
-          <span className="float-right">- Nelson Mandela</span>
+        <article className="font-light px-10 text-lg md:space-y-10">
+          <h2 className="hidden md:block font-semibold">
+            I'm <span>{text}</span>
+            <span>
+              <Cursor cursorStyle="|" />
+            </span>
+          </h2>
+          <div>
+            <p>
+              <em>
+                "The greatest glory in living lies not in never falling, but in
+                rising every time we fall."
+              </em>
+            </p>
+            <span className="float-right">- Nelson Mandela</span>
+          </div>
         </article>
       </section>
-      <section className="md-lg:"></section>
-    </>
+    </div>
   );
 };
 

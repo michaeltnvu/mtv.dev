@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen md:flex md:flex-col md:justify-between">
       <Navbar />
 
       <Routes>

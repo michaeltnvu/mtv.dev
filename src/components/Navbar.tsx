@@ -13,14 +13,14 @@ const Navbar = () => {
   //   </nav>
   // );
   return (
-    <div className="flex items-center justify-between mx-4">
+    <div className="flex items-center justify-between ml-2 mr-4">
       <a href="/">
         <img src="images/logo.png" alt="logo" className="w-20" />
       </a>
       <nav>
         <section className="flex lg:hidden">
           <div
-            className="hover:cursor-pointer mr-2 space-y-1 "
+            className="hover:cursor-pointer space-y-1"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <span className="block h-0.5 w-6 animate-pulse bg-black"></span>
