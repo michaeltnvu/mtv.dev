@@ -63,7 +63,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
   `;
 
   return (
-    <div className="flex flex-col items-center max-md:my-14">
+    <div className="flex flex-col items-center mt-14">
       <h2 className="font-bold text-3xl mb-4">Let's connect!</h2>
       {statusMessage && <p className="text-green-800">ff{statusMessage}</p>}
       <form onSubmit={handleSubmit} className="w-[22rem] md:w-[30rem] ">

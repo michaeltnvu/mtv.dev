@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const Projects: React.FC = () => {
   return (
-    <div className="flex flex-col items-center max-md:my-14">
+    <div className="flex flex-col items-center my-14">
       <h2 className="font-bold text-3xl mb-4">Projects</h2>
       <div className="flex flex-col gap-8">
         <div>
