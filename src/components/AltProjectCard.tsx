@@ -49,6 +49,8 @@ const AltProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Layout for lg breakpoint */}
       <div className="hidden lg:flex bg-slate-200 p-2 mx-4 md:p-4 lg:items-center lg:w-[60rem] xl rounded-md shadow-sm space-y-4">
         <div className="space-y-2 lg:text-center lg:px-6">
           <h3 className="font-semibold text-2xl">{title}</h3>
