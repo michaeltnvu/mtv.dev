@@ -13,7 +13,7 @@ const Navbar = () => {
   //   </nav>
   // );
   return (
-    <div className="flex items-center justify-between ml-2 mr-4">
+    <div className="flex items-center justify-between max-lg:mr-6 max-lg:ml-2 lg:mx-4">
       <a href="/">
         <img src="images/logo.png" alt="logo" className="w-20" />
       </a>

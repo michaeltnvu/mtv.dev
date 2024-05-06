@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="flex flex-col max-md:mt-14 md:flex-row md:mx-10 items-center justify-center max-md:space-y-16">
+      <section className="flex flex-col max-md:my-14 md:flex-row md:mx-10 items-center justify-center max-md:space-y-16">
         <article className="flex flex-col gap-2 items-center">
           <img
             src="/images/portraitsq.jpg"

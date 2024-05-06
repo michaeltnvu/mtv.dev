@@ -3,9 +3,9 @@ import ProjectCard from "../components/ProjectCard";
 
 const Projects: React.FC = () => {
   return (
-    <div className="max-w-[65vw] my-20 mx-auto">
-      <h2 className="font-bold text-3xl text-center">Projects</h2>
-      <div className="flex flex-col gap-20 mt-20">
+    <div className="flex flex-col items-center max-md:my-14">
+      <h2 className="font-bold text-3xl mb-4">Projects</h2>
+      <div className="flex flex-col gap-8">
         <div>
           <ProjectCard
             title="Pathfindr"
