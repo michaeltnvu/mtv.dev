@@ -19,19 +19,19 @@ const AltProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <>
-      <div className="bg-slate-200 p-2 mx-4 md:p-4 lg:hidden xl rounded-md shadow-sm space-y-6">
+      <div className="bg-slate-200 p-4 mx-4 rounded-md shadow-sm space-y-6 md:p-4 lg:hidden">
         <img
           src={image}
           alt="project screenshot"
-          className="lg:max-w-[50%] md:mx-auto p-1 shadow-lg rounded-lg"
+          className="mx-auto shadow-lg rounded-md md:min-w-[100%]"
         />
-        <div className="space-y-2 lg:text-center lg:px-6">
+        <div className="space-y-2">
           <h3 className="font-semibold text-2xl">{title}</h3>
           <p>{description}</p>
           <p>
             <span className="font-medium">Technologies used:</span> {skills}
           </p>
-          <div className="flex gap-4 items-center justify-center py-2">
+          <div className="flex gap-4 items-center justify-center pt-4">
             <Link
               to={liveLink}
               target="_blank"
@@ -51,14 +51,14 @@ const AltProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Layout for lg breakpoint */}
-      <div className="hidden lg:flex bg-slate-200 p-2 mx-4 md:p-4 lg:items-center lg:w-[60rem] xl rounded-md shadow-sm space-y-4">
+      <div className="hidden bg-slate-200 p-4 mx-4 rounded-md shadow-sm space-y-4 md:p-4 lg:flex lg:items-center lg:w-[60rem]">
         <div className="space-y-2 lg:text-center lg:px-6">
           <h3 className="font-semibold text-2xl">{title}</h3>
           <p>{description}</p>
           <p>
             <span className="font-medium">Technologies used:</span> {skills}
           </p>
-          <div className="flex gap-4 items-center justify-center py-2">
+          <div className="flex gap-4 items-center justify-center pt-2">
             <Link
               to={liveLink}
               target="_blank"
@@ -78,7 +78,7 @@ const AltProjectCard: React.FC<ProjectCardProps> = ({
         <img
           src={image}
           alt="project screenshot"
-          className="lg:max-w-[50%] md:mx-auto p-1 shadow-lg rounded-lg"
+          className="rounded-lg shadow-lg lg:max-w-[50%] lg:min-w-[50%]"
         />
       </div>
     </>

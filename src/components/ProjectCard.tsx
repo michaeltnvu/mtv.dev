@@ -18,11 +18,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   sourceCode,
 }) => {
   return (
-    <div className="bg-slate-200 lg:flex lg:items-center lg:w-[60rem] p-2 mx-4 md:p-4 rounded-md shadow-sm space-y-4">
+    <div className="bg-slate-200 p-4 mx-4 rounded-md shadow-sm space-y-4 md:p-4 lg:flex lg:items-center lg:w-[60rem]">
       <img
         src={image}
         alt="project screenshot"
-        className="md:mx-auto p-1 shadow-lg md:min-w-[100%] lg:max-w-[50%] lg:min-w-[50%] rounded-lg"
+        className="mx-auto shadow-lg rounded-md md:min-w-[100%] lg:max-w-[50%] lg:min-w-[50%]"
       />
       <div className="space-y-2 lg:text-center lg:px-6">
         <h3 className="font-semibold text-2xl">{title}</h3>
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p>
           <span className="font-medium">Technologies used:</span> {skills}
         </p>
-        <div className="flex gap-4 items-center justify-center py-2">
+        <div className="flex gap-4 items-center justify-center pt-4">
           <Link
             to={liveLink}
             target="_blank"

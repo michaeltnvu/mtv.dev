@@ -19,12 +19,12 @@ const Home = () => {
   });
 
   return (
-    <section className="flex flex-col max-md:my-14 md:flex-row md:mx-10 md:my-auto items-center justify-center max-md:space-y-16">
+    <section className="flex flex-col items-center justify-center max-md:space-y-16 max-md:my-14 md:flex-row md:mx-10 md:my-auto">
       <article className="flex flex-col gap-2 items-center">
         <img
           src="/images/portraitsq.jpg"
           alt="profile picture"
-          className="hidden max-sm:block w-60 max-md:rounded-md"
+          className="hidden w-60 max-sm:block max-md:rounded-md"
         />
         <img
           src="/images/portrait.jpg"
