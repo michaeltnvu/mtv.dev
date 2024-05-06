@@ -4,14 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  // return (
-  //   <nav className="flex justify-between items-center text-xl mx-10">
-  //     <img src="images/logo.png" alt="logo" className="w-20"/>
-  //     <div className="flex gap-6">
-
-  //     </div>
-  //   </nav>
-  // );
   return (
     <div className="flex items-center justify-between max-lg:mr-6 max-lg:ml-2 lg:mx-4">
       <a href="/">
@@ -31,12 +23,12 @@ const Navbar = () => {
           <div
             className={
               isNavOpen
-                ? "absolute w-full h-[100vh] top-0 left-0 bg-white z-10 flex flex-col justify-evenly items-center"
+                ? "absolute w-6/12 h-72 top-0 left-48 md:w-1/4 md:left-[35.8rem] bg-gray-100 z-10 flex flex-col justify-center items-center rounded-lg shadow-xl"
                 : "hidden"
             }
           >
             <div
-              className="absolute top-0 right-0 px-8 py-8"
+              className="absolute top-0 right-0 px-5 py-7"
               onClick={() => setIsNavOpen((prev) => !prev)}
             >
               <svg
@@ -52,21 +44,21 @@ const Navbar = () => {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="flex flex-col items-center justify-between min-h-[250px]">
+            <ul className="flex flex-col items-center justify-evenly min-h-[250px]">
               <li
-                className="border-b border-indigo-500 my-8 uppercase"
+                className="border-b border-indigo-500 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <Link to="/">home</Link>
               </li>
               <li
-                className="border-b border-indigo-500 my-8 uppercase"
+                className="border-b border-indigo-500 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <Link to="/projects">projects</Link>
               </li>
               <li
-                className="border-b border-indigo-500 my-8 uppercase"
+                className="border-b border-indigo-500 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <Link to="/contact">contact</Link>

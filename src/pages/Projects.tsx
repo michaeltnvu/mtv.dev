@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
         <div>
           <ProjectCard
             title="Pathfindr"
-            description="A captivating full-stack social media app tailored for travel enthusiasts. Powered by the MERN stack, its SPA frontend, built with React, offers a seamless experience with multiple views and full CRUD actions. The REST API backend, constructed with ExpressJS, MongoDB, and Mongoose, communicates flawlessly with the frontend. With user authentication, Pathfindr ensures a secure and feature-rich environment."
+            description="A MERN stack social media app tailored for travel enthusiasts. The REST API backend, constructed with ExpressJS, MongoDB, and Mongoose, communicates seamlessly with the frontend built with React. With user authentication, Pathfindr ensures a secure and feature-rich environment."
             skills="JavaScript, React, Express, Node, MongoDB, Tailwind, Cloudinary, Netlify, Adaptable.io"
             image="images/pathfindr.jpg"
             liveLink="https://pathfindrr.netlify.app/login"

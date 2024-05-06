@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <img
         src={image}
         alt="project screenshot"
-        className="md:mx-auto p-1 shadow-sm lg:max-w-[50%] lg:min-w-[50%]"
+        className="md:mx-auto p-1 shadow-lg md:min-w-[100%] lg:max-w-[50%] lg:min-w-[50%] rounded-lg"
       />
       <div className="space-y-2 lg:text-center lg:px-6">
         <h3 className="font-semibold text-2xl">{title}</h3>
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p>
           <span className="font-medium">Technologies used:</span> {skills}
         </p>
-        <div className="flex gap-4 items-center justify-center">
+        <div className="flex gap-4 items-center justify-center py-2">
           <Link
             to={liveLink}
             target="_blank"

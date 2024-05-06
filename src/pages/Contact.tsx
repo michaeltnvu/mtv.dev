@@ -65,8 +65,8 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
   return (
     <div className="flex flex-col items-center mt-14">
       <h2 className="font-bold text-3xl mb-4">Let's connect!</h2>
-      {statusMessage && <p className="text-green-800">ff{statusMessage}</p>}
-      <form onSubmit={handleSubmit} className="w-[22rem] md:w-[30rem] ">
+      {statusMessage && <p className="text-green-800">{statusMessage}</p>}
+      <form onSubmit={handleSubmit} className="w-[22rem] md:w-[30rem]">
         <div>
           <label htmlFor="name" className="text-xl">
             Name:
@@ -117,7 +117,7 @@ Here's the plan: We build something awesome, and you make sure everyone knows it
         </div>
         <button
           type="submit"
-          className="bg-indigo-500 border float-right py-1 px-6 mt-4 rounded-md text-white text-sm md:text-lg hover:bg-indigo-400 self-end"
+          className="bg-indigo-500 border border-black float-right py-1 px-4 mt-4 rounded-md text-white hover:bg-indigo-400 self-end"
         >
           Send
         </button>
