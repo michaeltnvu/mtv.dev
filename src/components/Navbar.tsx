@@ -23,12 +23,12 @@ const Navbar = () => {
           <div
             className={
               isNavOpen
-                ? "absolute w-6/12 h-72 top-0 left-48 md:w-1/4 md:left-[35.8rem] bg-gray-100 z-10 flex flex-col justify-center items-center rounded-lg shadow-xl"
+                ? "absolute top-0 right-0 w-6/12 h-72 md:w-1/4 bg-gray-100 z-10 flex flex-col justify-center items-center rounded-lg shadow-xl"
                 : "hidden"
             }
           >
             <div
-              className="absolute top-0 right-0 px-5 py-7"
+              className="absolute top-0 right-0 px-6 py-7"
               onClick={() => setIsNavOpen((prev) => !prev)}
             >
               <svg
