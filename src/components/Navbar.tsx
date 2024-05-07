@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   return (
     <div className="flex items-center justify-between max-lg:mr-6 max-lg:ml-2 lg:mx-4">

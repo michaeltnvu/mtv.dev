@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
-const Home = () => {
+const Home: React.FC = () => {
   const [text] = useTypewriter({
     words: [
       "Michael (hello!)",
