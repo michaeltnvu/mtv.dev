@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         />
         <h1 className="font-bold text-3xl">Michael Vu</h1>
         <Link
-          to="https://drive.google.com/file/d/1OTI_N9mykEPVAxAYo1ELGu-Q-aKK_CME/view?usp=sharing"
+          to="https://drive.google.com/file/d/1ZqVnPjMC5-UhACW4WILURjqLLIqVwVlv/view?usp=sharing"
           target="_blank"
           className="border border-black py-1 px-4 bg-indigo-500 hover:bg-indigo-400 rounded-md shadow-md text-white"
         >
